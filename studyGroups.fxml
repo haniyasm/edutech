@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="student.CreateStudyGroups" alignment="CENTER" spacing="20" prefWidth="640" prefHeight="450">
+
+    <!-- Header Label -->
+    <Label text="Study Groups" style="-fx-font-size: 24px; -fx-font-weight: bold;" alignment="CENTER"/>
+
+    <!-- Buttons for Create and View Study Groups -->
+    <HBox alignment="CENTER" spacing="20">
+        <Button text="Create Study Group" onAction="#handleCreateStudyGroup" maxWidth="200"/>
+        <Button text="View Study Groups" onAction="#handleViewStudyGroups" maxWidth="200"/>
+        <Button text="Back" onAction="#handleBack" maxWidth="200"/>
+    </HBox>
+
+    <ScrollPane fitToWidth="true">
+    <VBox fx:id="groupsContainer" spacing="10" alignment="CENTER" prefWidth="400" />
+    </ScrollPane>
+
+
+    <!-- Table and Log Section, initially hidden -->
+    <VBox fx:id="groupCreationSection" alignment="CENTER" spacing="20" visible="false" managed="false">
+        <!-- Table to Display Students -->
+        <TableView fx:id="studentsTable" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn text="ID" prefWidth="100" fx:id="colStudentID"/>
+                <TableColumn text="Name" prefWidth="200" fx:id="colStudentName"/>
+                <TableColumn text="Username" prefWidth="200" fx:id="colStudentUsername"/>
+                <TableColumn text="Action" prefWidth="100" fx:id="colAction"/>
+            </columns>
+        </TableView>
+
+        <!-- Add Plan Button -->
+        <Button text="Add Group" onAction="#handleSaveGroups" maxWidth="200" alignment="CENTER"/>
+
+        <!-- Log Section -->
+        <VBox alignment="TOP_LEFT" spacing="10" prefWidth="600">
+            <Label text="Added Students:" style="-fx-font-size: 18px;"/>
+            <TextArea fx:id="logTextArea" prefHeight="100" prefWidth="580" editable="false"/>
+        </VBox>
+
+    </VBox>
+
+</VBox>

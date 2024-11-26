@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?> 
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="user.StudentTrackPerformance" prefWidth="640" prefHeight="480">
+    <!-- Background -->
+    <AnchorPane styleClass="background">
+        <!-- Header -->
+        <Label text="Track Your Performance" styleClass="header-text" layoutX="20" layoutY="10" />
+
+        <!-- Subjects Section -->
+        <VBox layoutX="20" layoutY="70" spacing="20" prefWidth="750">
+            <!-- First row of subjects -->
+            <HBox spacing="20" alignment="center">
+                <VBox styleClass="subject-box" alignment="center" spacing="10">
+                    <Label text="Maths" styleClass="subject-title" />
+                    <Label text="Quizzes: 0" styleClass="stats-label" />
+                    <Label text="Assignments: 0" styleClass="stats-label" />
+                </VBox>
+                <VBox styleClass="subject-box" alignment="center" spacing="10">
+                    <Label text="English" styleClass="subject-title" />
+                    <Label text="Quizzes: 0" styleClass="stats-label" />
+                    <Label text="Assignments: 0" styleClass="stats-label" />
+                </VBox>
+                <VBox styleClass="subject-box" alignment="center" spacing="10">
+                    <Label text="History" styleClass="subject-title" />
+                    <Label text="Quizzes: 0" styleClass="stats-label" />
+                    <Label text="Assignments: 0" styleClass="stats-label" />
+                </VBox>
+            </HBox>
+
+            <!-- Second row of subjects -->
+            <HBox spacing="20" alignment="center">
+                <VBox styleClass="subject-box" alignment="center" spacing="10">
+                    <Label text="Science" styleClass="subject-title" />
+                    <Label text="Quizzes: 0" styleClass="stats-label" />
+                    <Label text="Assignments: 0" styleClass="stats-label" />
+                </VBox>
+                <VBox styleClass="subject-box" alignment="center" spacing="10">
+                    <Label text="Geography" styleClass="subject-title" />
+                    <Label text="Quizzes: 0" styleClass="stats-label" />
+                    <Label text="Assignments: 0" styleClass="stats-label" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Charts Section (Side by side horizontally) -->
+        <HBox layoutX="150" layoutY="360" spacing="8" alignment="center">
+            <VBox alignment="center" spacing="4">
+                <Label text="Activity Overview" styleClass="chart-title" />
+                <PieChart fx:id="activityChart" prefWidth="250" prefHeight="250" />
+            </VBox>
+            <VBox alignment="center" spacing="4">
+                <Label text="Course Progress" styleClass="chart-title" />
+                <PieChart fx:id="progressChart" prefWidth="250" prefHeight="250" />
+            </VBox>
+        </HBox>
+    </AnchorPane>
+</AnchorPane>
+

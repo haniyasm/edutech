@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="sda.UserType" style=" -fx-background-color: linear-gradient(to bottom, #FFB997, #843B62); -fx-alignment: center; -fx-padding: 20px;" >
+    <Label fx:id="roleSelectionLabel" text="Select Your Role" styleClass="roleSelectionLabel" />
+    <Button text="Admin" styleClass="custom-button" onAction="#onAdminSelected" 
+    	style="-fx-font: 20px 'Arial'; -fx-pref-width: 200px; -fx-pref-height: 50px;" />
+    <Button text="Student" styleClass="custom-button" onAction="#onStudentSelected" 
+    	style="-fx-font: 20px 'Arial'; -fx-pref-width: 200px; -fx-pref-height: 50px;" />
+    <Button text="Parent" styleClass="custom-button" onAction="#onParentSelected" 
+    	style="-fx-font: 20px 'Arial'; -fx-pref-width: 200px; -fx-pref-height: 50px;" />
+</VBox>
+

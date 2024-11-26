@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.AuthController">
+       <!-- Login Tab -->
+    <Tab text="Login" style="-fx-background-color: #E8B8C4; -fx-border-color: #FFFFFF;">
+        <VBox alignment="CENTER" spacing="15" styleClass="vbox">
+            <Label text="LOGIN" style="-fx-text-fill: #FFFFFF; -fx-font-size: 60px; -fx-font-weight: bold;" />
+            <TextField fx:id="loginUsernameField" promptText="Username" />
+            <PasswordField fx:id="loginPasswordField" promptText="Password" />
+            <Button text="Login" onAction="#handleLogin" styleClass="custom-button" 
+            	style="-fx-font: 20px 'Arial'; -fx-pref-width: 200px; -fx-pref-height: 50px;" />
+            <Button text="Back" onAction="#goBack"  styleClass="back-button" 
+            	style="-fx-font: 20px 'Arial'; -fx-padding: 5; -fx-pref-width: 150px; -fx-pref-height: 50px;" />
+        </VBox>
+    </Tab>
+    <!-- Signup Tab -->
+    <Tab text="Signup" style="-fx-background-color: #E8B8C4; -fx-border-color: #FFFFFF;">
+        <VBox alignment="CENTER" spacing="15" styleClass="vbox">
+            <Label text="SIGNUP" style="-fx-text-fill: #FFFFFF; -fx-font-size: 60px; -fx-font-weight: bold;" />
+            <TextField fx:id="signupNameField" promptText="Name" />
+            <TextField fx:id="signupUsernameField" promptText="Username" />
+            <PasswordField fx:id="signupPasswordField" promptText="Password" />
+            <Button text="Sign Up" onAction="#handleSignUp" styleClass="custom-button" 
+            	style="-fx-font: 20px 'Arial'; -fx-pref-width: 200px; -fx-pref-height: 50px;" />
+            <Button text="Back" onAction="#goBack" styleClass="back-button" 
+            	style="-fx-font: 20px 'Arial'; -fx-padding: 5; -fx-pref-width: 150px; -fx-pref-height: 50px;" />
+        </VBox>
+    </Tab>
+</TabPane>
