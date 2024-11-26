@@ -1,0 +1,11 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="student.videosViewController">
+    <Label fx:id="selectedCourseLabel" text="Selected Course:" />
+    <ComboBox fx:id="videosComboBox" onAction="#handleVideoSelection"/>
+    <Label fx:id="videoUrlLabel" text="Video URL will appear here" />
+    <WebView fx:id="webView" />
+    <Button text="Play Video" onAction="#handlePlayButton"/>
+</VBox>

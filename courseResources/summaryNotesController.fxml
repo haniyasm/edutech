@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="student.summaryNotesController"
+      alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20; -fx-alignment: center;">
+
+    <!-- Label to display the selected course name -->
+    <Label fx:id="courseNameLabel" text="Course Name"
+           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <!-- VBox to hold the summary notes dynamically -->
+    <VBox fx:id="summaryContainer" spacing="10" style="-fx-padding: 10;"/>
+</VBox>

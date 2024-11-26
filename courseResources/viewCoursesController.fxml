@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="student.viewCoursesController" spacing="10" alignment="CENTER">
+    <Label text="Your Enrolled Courses" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    
+    <ListView fx:id="enrolledCoursesListView" prefWidth="300" prefHeight="200" />
+    
+    <Button fx:id="backButton" text="Back" onAction="#handleBackButton" />
+</VBox>
