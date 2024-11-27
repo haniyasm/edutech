@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="student.attemptQuiz" spacing="10" alignment="TOP_CENTER">
+   <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Courses and Quizzes" styleClass="title"/>
+
+    <!-- Scrollable ListView for courses -->
+    <ScrollPane fitToWidth="true" prefHeight="200" prefWidth="300">
+        <ListView fx:id="courseListView" />
+    </ScrollPane>
+
+    <Label text="Quizzes" styleClass="subtitle"/>
+
+    <!-- Scrollable ListView for quizzes -->
+    <ScrollPane fitToWidth="true" prefHeight="200" prefWidth="300">
+        <ListView fx:id="quizListView" />
+    </ScrollPane>
+
+    <Label text="Questions" styleClass="subtitle"/>
+
+    <!-- Scrollable question container -->
+    <ScrollPane fitToWidth="true" prefHeight="300" prefWidth="400">
+        <VBox fx:id="questionContainer" spacing="10" alignment="TOP_LEFT">
+            <!-- Dynamically populated questions will appear here -->
+        </VBox>
+    </ScrollPane>
+    
+    <!-- Go Back Button -->
+    <Button text="Go Back" fx:id="goBackButton" onAction="#handleGoBack" alignment="CENTER"/>
+</VBox>

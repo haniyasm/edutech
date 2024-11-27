@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="assessments.addExercise" fitToWidth="true">
+    <VBox spacing="10" alignment="TOP_CENTER" >
+	    <padding>
+	        <Insets top="10" right="10" bottom="10" left="10"/>
+	    </padding>
+        <Label text="Exercise Manager" styleClass="title"/>
+
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <HBox spacing="10">
+                <Label text="Exercise Name:"/>
+                <TextField fx:id="exerciseNameField" promptText="Enter exercise name"/>
+            </HBox>
+            
+            <HBox spacing="10">
+                <Label text="Course Name:"/>
+                <TextField fx:id="courseNameField" promptText="Enter course name"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Topic Name:"/>
+                <TextField fx:id="topicNameField" promptText="Enter topic name"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Question:"/>
+                <TextField fx:id="questionField" promptText="Enter question"/>
+            </HBox>
+        </VBox>
+
+        <HBox spacing="10">
+            <Button fx:id="addQuestionButton" text="Add Question" onAction="#handleAddQuestion"/>
+            <Button fx:id="uploadExerciseButton" text="Upload Assignment" onAction="#handleUploadExercise"/>
+            <Button text="Go Back" fx:id="goBackButton" onAction="#handleGoBack" alignment="CENTER"/>
+        </HBox>
+
+        <Label text="Added Questions:" styleClass="subtitle"/>
+        <TableView fx:id="questionsTable" prefHeight="300" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="topicColumn" text="Topic" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="topic"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="questionColumn" text="Question" prefWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="question"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="answerColumn" text="Answer" prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="answer"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="marksColumn" text="Marks" prefWidth="50">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="marks"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</ScrollPane>

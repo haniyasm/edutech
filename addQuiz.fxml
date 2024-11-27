@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="assessments.addQuiz" fitToWidth="true">
+    <VBox spacing="10" alignment="TOP_CENTER">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <Label text="Quiz Manager" styleClass="title"/>
+
+        <VBox spacing="15" alignment="CENTER_LEFT" prefWidth="400">
+            <VBox spacing="10">
+                <Label text="Quiz Name:"/>
+                <TextField fx:id="quizNameField" promptText="Enter Quiz name"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Duration"/>
+                <TextField fx:id="durationField" promptText="Enter duration time (minutes)"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Course Name:"/>
+                <TextField fx:id="courseNameField" promptText="Enter course name"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Topic Name:"/>
+                <TextField fx:id="topicNameField" promptText="Enter topic name"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Question:"/>
+                <TextArea fx:id="questionField" promptText="Enter question" styleClass="custom-text-field"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Answer:"/>
+                <TextField fx:id="answerField" promptText="Enter answer"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Total Marks:"/>
+                <TextField fx:id="marksField" promptText="Enter marks"/>
+            </VBox>
+        </VBox>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="addQuestionButton" text="Add Question" onAction="#handleAddQuestion"/>
+            <Button fx:id="uploadQuizButton" text="Upload Quiz" onAction="#handleUploadQuiz"/>
+            <Button text="Go Back" fx:id="goBackButton" onAction="#handleGoBack" alignment="CENTER"/>
+        </HBox>
+
+        <Label text="Added Questions:" styleClass="subtitle"/>
+        <TableView fx:id="questionsTable" prefHeight="300" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="topicColumn" text="Topic" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="topic"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="questionColumn" text="Question" prefWidth="200">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="question"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="answerColumn" text="Answer" prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="answer"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="marksColumn" text="Marks" prefWidth="50">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="marks"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</ScrollPane>

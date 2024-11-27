@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="student.attemptExercise" spacing="10" alignment="TOP_CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Courses and Exercises" styleClass="title"/>
+
+    <!-- Scrollable ListView -->
+    <ScrollPane fitToWidth="true" prefHeight="200" prefWidth="300">
+        <ListView fx:id="courseListView" />
+    </ScrollPane>
+
+    <Label text="Exercises" styleClass="subtitle"/>
+
+    <!-- Scrollable exerciseContainer -->
+    <ScrollPane fitToWidth="true" prefHeight="300" prefWidth="400">
+        <VBox fx:id="exerciseContainer" spacing="10" alignment="TOP_LEFT">
+            <!-- Dynamically populated exercises will appear here -->
+        </VBox>
+    </ScrollPane>
+</VBox>
